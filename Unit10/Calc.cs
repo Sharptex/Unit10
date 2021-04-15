@@ -17,11 +17,12 @@ namespace Unit10
 
         public decimal Sum()
         {
-            Logger.Event("Начало метода");
+            Logger.Event("Получение данных");
             decimal number1 = GetNumberFromConsole("Введите первое слагаемое ");
             decimal number2 = GetNumberFromConsole("Введите второе слагаемое ");
+            Logger.Event("Данные получены");
 
-            Logger.Event("Вывод результата");
+            Logger.Event("Суммирование");
             return number1 + number2;
         }
 
@@ -47,6 +48,7 @@ namespace Unit10
                     if (res)
                     {
                         Console.WriteLine("Попробуйте еще раз!");
+                        Logger.Event("Повторный ввод данных");
                     }
                 }
             }
